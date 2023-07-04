@@ -5,37 +5,37 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
-puts "Seeding Data"
-30.times do 
-    Venue.create(
-  price: Faker::Commerce.price,
-  description: Faker::Lorem.paragraph,
-  location: Faker::Address.city,
-  capacity: Faker::Number.between(from: 10, to: 300),
-  imageUrl: Faker::Avatar.image,
-#   user_id: rand(1..User.all.size)
-)
-end
+# puts "Seeding Data"
+# 30.times do 
+#     Venue.create(
+#   price: Faker::Commerce.price,
+#   description: Faker::Lorem.paragraph,
+#   location: Faker::Address.city,
+#   capacity: Faker::Number.between(from: 10, to: 300),
+#   imageUrl: Faker::Avatar.image,
+# #   user_id: rand(1..User.all.size)
+# )
+# end
 
 
 
-30.times do 
-    Booking.create(
-    duration: rand(1..72),
-    num_guest: Faker::Number.between(from: 10, to: 300),
-    venue_id: rand(1..Venue.all.size),
-    startDate: DateTime.new(2022,6,rand(1..30),rand(1..19),rand(1.60)),
-    endDate: DateTime.new(2022,6,rand(1..30),rand(6..19),rand(1.60))
-)
-end
+# 30.times do 
+#     Booking.create(
+#     duration: rand(1..72),
+#     num_guest: Faker::Number.between(from: 10, to: 300),
+#     venue_id: rand(1..Venue.all.size),
+#     startDate: DateTime.new(2022,6,rand(1..30),rand(1..19),rand(1.60)),
+#     endDate: DateTime.new(2022,6,rand(1..30),rand(6..19),rand(1.60))
+# )
+# end
 
-30.times do
-    Payment.create(
-        venue_price: Faker::Commerce.price,
-        booking_id: rand(1..Booking.all.size),
-        # user_id: rand(1..User.all.size)
-    )
-    end
+# 30.times do
+#     Payment.create(
+#         venue_price: Faker::Commerce.price,
+#         booking_id: rand(1..Booking.all.size),
+#         # user_id: rand(1..User.all.size)
+#     )
+#     end
 
 
 # 5.times do 
@@ -54,4 +54,4 @@ end
 #     )
 #   end
 
-puts "Done Data"
+# puts "Done Data"
